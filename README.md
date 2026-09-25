@@ -1,8 +1,8 @@
-# Flamex Sans
+# Chintan Sans
 
-Flamex Sans is a screen face for a product interface. It is a derivative of [Inter](https://github.com/rsms/inter) 4.2, aimed at the same kind of app face as Atlassian Sans. Inter is a Reserved Font Name, so this family has its own name. It is not Atlassian Sans, and Atlassian does not endorse it.
+Chintan Sans is a screen face for a product interface. It is a derivative of [Inter](https://github.com/rsms/inter) 4.2, aimed at the same kind of app face as Atlassian Sans. Inter is a Reserved Font Name, so this family has its own name. It is not Atlassian Sans, and Atlassian does not endorse it.
 
-Atlassian documents their app face as Inter with a fixed set of alternates always on. Flamex Sans bakes those in:
+Atlassian documents their app face as Inter with a fixed set of alternates always on. Chintan Sans bakes those in:
 
 - serif on the capital I
 - spur on the capital G
@@ -22,16 +22,16 @@ Spacing stays a little tighter than Inter. Slashed zero and the tailed l stay op
 
 ## Use it on a website
 
-The light setup is one variable file, 98 KB, for every weight. See [docs/website.md](docs/website.md).
+The light setup is one variable file, 99 KB, for every weight. See [docs/website.md](docs/website.md).
 
 ```html
-<link rel="preload" href="/fonts/web/FlamexSans-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/css/flamex-web.css">
+<link rel="preload" href="/fonts/web/ChintanSans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/css/chintan-web.css">
 ```
 
 ```css
 body {
-  font-family: "Flamex Sans", sans-serif;
+  font-family: "Chintan Sans", sans-serif;
   font-synthesis: none;
 }
 ```
@@ -40,11 +40,11 @@ body {
 
 | Path | Use |
 | --- | --- |
-| `css/flamex-web.css` | Website stylesheet. See [docs/website.md](docs/website.md). |
+| `css/chintan-web.css` | Website stylesheet. See [docs/website.md](docs/website.md). |
 | `fonts/web/` | Latin and Latin Extended variable WOFF2 files |
 | `fonts/variable/*.ttf` | Install on Windows, macOS, and Linux |
 | `fonts/static/` | One file per weight, for apps that ignore variable fonts |
-| `css/flamex.css` | Full specimen stylesheet, not the website default |
+| `css/chintan.css` | Full specimen stylesheet, not the website default |
 
 Useful features already in the font:
 
@@ -55,9 +55,9 @@ Useful features already in the font:
 
 ## License
 
-SIL Open Font License 1.1. See [OFL.txt](OFL.txt). You can bundle Flamex Sans with a product. You cannot sell the font files by themselves, and you cannot rename a modified version back to Inter.
+SIL Open Font License 1.1. See [OFL.txt](OFL.txt). You can bundle Chintan Sans with a product. You cannot sell the font files by themselves, and you cannot rename a modified version back to Inter.
 
-Flamex Sans is not endorsed by Rasmus Andersson or the Inter project.
+Chintan Sans is not endorsed by Rasmus Andersson or the Inter project.
 
 ## Rebuild
 

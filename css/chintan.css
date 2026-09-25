@@ -1,0 +1,196 @@
+/* Chintan Sans. SIL Open Font License 1.1. See ../OFL.txt.
+   Use Chintan Sans Variable where the browser understands variable fonts.
+   Chintan Sans is the static fallback for older browsers. */
+
+@font-face {
+  font-family: "Chintan Sans Variable";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/variable/ChintanSans-Variable.woff2") format("woff2"),
+       url("../fonts/variable/ChintanSans-Variable.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Chintan Sans Variable";
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/variable/ChintanSans-VariableItalic.woff2") format("woff2"),
+       url("../fonts/variable/ChintanSans-VariableItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Chintan Sans";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("../fonts/static/ChintanSans-Thin.woff2") format("woff2"),
+       url("../fonts/static/ChintanSans-Thin.woff") format("woff"),
+       url("../fonts/static/ChintanSans-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Chintan Sans";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("../fonts/static/ChintanSans-ExtraLight.woff2") format("woff2"),
+       url("../fonts/static/ChintanSans-ExtraLight.woff") format("woff"),
+       url("../fonts/static/ChintanSans-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Chintan Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/static/ChintanSans-Light.woff2") format("woff2"),
+       url("../fonts/static/ChintanSans-Light.woff") format("woff"),
+       url("../fonts/static/ChintanSans-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Chintan Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/static/ChintanSans-Regular.woff2") format("woff2"),
+       url("../fonts/static/ChintanSans-Regular.woff") format("woff"),
+       url("../fonts/static/ChintanSans-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Chintan Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/static/ChintanSans-Medium.woff2") format("woff2"),
+       url("../fonts/static/ChintanSans-Medium.woff") format("woff"),
+       url("../fonts/static/ChintanSans-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Chintan Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/static/ChintanSans-SemiBold.woff2") format("woff2"),
+       url("../fonts/static/ChintanSans-SemiBold.woff") format("woff"),
+       url("../fonts/static/ChintanSans-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Chintan Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/static/ChintanSans-Bold.woff2") format("woff2"),
+       url("../fonts/static/ChintanSans-Bold.woff") format("woff"),
+       url("../fonts/static/ChintanSans-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Chintan Sans";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/static/ChintanSans-ExtraBold.woff2") format("woff2"),
+       url("../fonts/static/ChintanSans-ExtraBold.woff") format("woff"),
+       url("../fonts/static/ChintanSans-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Chintan Sans";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fonts/static/ChintanSans-Black.woff2") format("woff2"),
+       url("../fonts/static/ChintanSans-Black.woff") format("woff"),
+       url("../fonts/static/ChintanSans-Black.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Chintan Sans";
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url("../fonts/static/ChintanSans-ThinItalic.woff2") format("woff2"),
+       url("../fonts/static/ChintanSans-ThinItalic.woff") format("woff"),
+       url("../fonts/static/ChintanSans-ThinItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Chintan Sans";
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url("../fonts/static/ChintanSans-ExtraLightItalic.woff2") format("woff2"),
+       url("../fonts/static/ChintanSans-ExtraLightItalic.woff") format("woff"),
+       url("../fonts/static/ChintanSans-ExtraLightItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Chintan Sans";
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/static/ChintanSans-LightItalic.woff2") format("woff2"),
+       url("../fonts/static/ChintanSans-LightItalic.woff") format("woff"),
+       url("../fonts/static/ChintanSans-LightItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Chintan Sans";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/static/ChintanSans-Italic.woff2") format("woff2"),
+       url("../fonts/static/ChintanSans-Italic.woff") format("woff"),
+       url("../fonts/static/ChintanSans-Italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Chintan Sans";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/static/ChintanSans-MediumItalic.woff2") format("woff2"),
+       url("../fonts/static/ChintanSans-MediumItalic.woff") format("woff"),
+       url("../fonts/static/ChintanSans-MediumItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Chintan Sans";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/static/ChintanSans-SemiBoldItalic.woff2") format("woff2"),
+       url("../fonts/static/ChintanSans-SemiBoldItalic.woff") format("woff"),
+       url("../fonts/static/ChintanSans-SemiBoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Chintan Sans";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/static/ChintanSans-BoldItalic.woff2") format("woff2"),
+       url("../fonts/static/ChintanSans-BoldItalic.woff") format("woff"),
+       url("../fonts/static/ChintanSans-BoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Chintan Sans";
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/static/ChintanSans-ExtraBoldItalic.woff2") format("woff2"),
+       url("../fonts/static/ChintanSans-ExtraBoldItalic.woff") format("woff"),
+       url("../fonts/static/ChintanSans-ExtraBoldItalic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Chintan Sans";
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fonts/static/ChintanSans-BlackItalic.woff2") format("woff2"),
+       url("../fonts/static/ChintanSans-BlackItalic.woff") format("woff"),
+       url("../fonts/static/ChintanSans-BlackItalic.ttf") format("truetype");
+}
+
+.chintan {
+  font-family: "Chintan Sans Variable", "Chintan Sans", sans-serif;
+  font-synthesis: none;
+  font-optical-sizing: auto;
+}
+.chintan-data {
+  font-feature-settings: "ss02" 1, "tnum" 1;
+  font-variant-numeric: tabular-nums;
+}
+.chintan-single-story {
+  font-feature-settings: "cv11" 1;
+}

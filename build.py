@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Build Flamex Sans from the local Inter variable fonts.
+"""Build Chintan Sans from the local Inter variable fonts.
 
-Flamex Sans is a renamed, screen-focused derivative. Inter is a Reserved
+Chintan Sans is a renamed, screen-focused derivative. Inter is a Reserved
 Font Name, so it is not used as the family name. The build:
 
 - bakes the Inter alternates used for an Atlassian-style app face
@@ -31,14 +31,14 @@ logging.getLogger("fontTools").setLevel(logging.ERROR)
 ROOT = Path(__file__).resolve().parent
 SOURCE = ROOT.parent / "inter" / "docs" / "font-files"
 OUT = ROOT / "fonts"
-CSS_PATH = ROOT / "css" / "flamex.css"
+CSS_PATH = ROOT / "css" / "chintan.css"
 
-FAMILY = "Flamex Sans"
-VARIABLE_FAMILY = "Flamex Sans Variable"
+FAMILY = "Chintan Sans"
+VARIABLE_FAMILY = "Chintan Sans Variable"
 # Filenames and PostScript names cannot contain spaces.
-PS_FAMILY = "FlamexSans"
-VERSION = "1.200"
-VENDOR = "FLMX"
+PS_FAMILY = "ChintanSans"
+VERSION = "1.300"
+VENDOR = "CHSN"
 # Inter features Atlassian turns on for every UI string.
 DIRECTION_FEATURES = ("cv08", "cv10", "cv09", "cv07", "cv14", "ss07", "ss08")
 # Units removed from each advance when every glyph that shares that
@@ -70,17 +70,17 @@ COPYRIGHT = (
     "Copyright 2016 The Inter Project Authors. "
     "Copyright 2026 Chintan."
 )
-TRADEMARK = "Flamex Sans. Inter is a trademark of rsms."
+TRADEMARK = "Chintan Sans. Inter is a trademark of rsms."
 DESCRIPTION = (
-    "Flamex Sans is a screen-focused derivative of Inter for product interfaces. "
+    "Chintan Sans is a screen-focused derivative of Inter for product interfaces. "
     "Defaults use the Inter alternates from the Atlassian app-face recipe: "
     "serif I, spurred G, flat-top 3, alternate German double s, and square "
     "punctuation and quotes. Spacing is slightly tighter than Inter. "
     "Original design by Rasmus Andersson and the Inter Project Authors. "
-    "Flamex Sans is not endorsed by the Inter project or by Atlassian."
+    "Chintan Sans is not endorsed by the Inter project or by Atlassian."
 )
 DESIGNER = "Rasmus Andersson"
-MANUFACTURER = "Flamex"
+MANUFACTURER = "Chintan"
 LICENSE = (
     "This Font Software is licensed under the SIL Open Font License, Version 1.1. "
     "This license is available with a FAQ at: http://scripts.sil.org/OFL"
@@ -310,7 +310,7 @@ def set_gasp(font: TTFont) -> None:
 
 def apply_common_metadata(font: TTFont, italic: bool) -> None:
     head = font["head"]
-    head.fontRevision = 1.2
+    head.fontRevision = 1.3
     head.macStyle = ITALIC_BIT if italic else 0
     os2 = font["OS/2"]
     os2.achVendID = VENDOR
@@ -563,9 +563,9 @@ def write_font(font: TTFont, ttf: Path, woff2: Path, woff: Path | None = None) -
 def write_css(static_faces: list[tuple[int, bool, str]]) -> None:
     CSS_PATH.parent.mkdir(parents=True, exist_ok=True)
     lines = [
-        "/* Flamex Sans. SIL Open Font License 1.1. See ../OFL.txt.",
-        "   Use Flamex Sans Variable where the browser understands variable fonts.",
-        "   Flamex Sans is the static fallback for older browsers. */",
+        "/* Chintan Sans. SIL Open Font License 1.1. See ../OFL.txt.",
+        "   Use Chintan Sans Variable where the browser understands variable fonts.",
+        "   Chintan Sans is the static fallback for older browsers. */",
         "",
         "@font-face {",
         f'  font-family: "{VARIABLE_FAMILY}";',
@@ -603,16 +603,16 @@ def write_css(static_faces: list[tuple[int, bool, str]]) -> None:
     lines.extend(
         [
             "",
-            ".flamex {",
+            ".chintan {",
             f'  font-family: "{VARIABLE_FAMILY}", "{FAMILY}", sans-serif;',
             "  font-synthesis: none;",
             "  font-optical-sizing: auto;",
             "}",
-            ".flamex-data {",
+            ".chintan-data {",
             '  font-feature-settings: "ss02" 1, "tnum" 1;',
             "  font-variant-numeric: tabular-nums;",
             "}",
-            ".flamex-single-story {",
+            ".chintan-single-story {",
             '  font-feature-settings: "cv11" 1;',
             "}",
             "",
