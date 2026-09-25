@@ -1,7 +1,7 @@
-Copyright (c) 2026 StayLabs
+Copyright (c) 2026 Chintan
 Copyright (c) 2016 The Inter Project Authors (https://github.com/rsms/inter)
 
-StayLabs Sans is a derivative of Inter. "Inter" is a Reserved Font Name
+Flamex Sans is a derivative of Inter. "Inter" is a Reserved Font Name
 of the Inter project and is not the name of this font.
 
 Copyright (c) 2016 The Inter Project Authors (https://github.com/rsms/inter)

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Build StayLabs Sans from the local Inter variable fonts.
+"""Build Flamex Sans from the local Inter variable fonts.
 
-StayLabs Sans is a renamed, screen-focused derivative. Inter is a Reserved
+Flamex Sans is a renamed, screen-focused derivative. Inter is a Reserved
 Font Name, so it is not used as the family name. The build:
 
 - bakes the Inter alternates used for an Atlassian-style app face
@@ -31,14 +31,14 @@ logging.getLogger("fontTools").setLevel(logging.ERROR)
 ROOT = Path(__file__).resolve().parent
 SOURCE = ROOT.parent / "inter" / "docs" / "font-files"
 OUT = ROOT / "fonts"
-CSS_PATH = ROOT / "css" / "staylabs.css"
+CSS_PATH = ROOT / "css" / "flamex.css"
 
-FAMILY = "StayLabs Sans"
-VARIABLE_FAMILY = "StayLabs Sans Variable"
+FAMILY = "Flamex Sans"
+VARIABLE_FAMILY = "Flamex Sans Variable"
 # Filenames and PostScript names cannot contain spaces.
-PS_FAMILY = "StayLabsSans"
-VERSION = "1.100"
-VENDOR = "STLB"
+PS_FAMILY = "FlamexSans"
+VERSION = "1.200"
+VENDOR = "FLMX"
 # Inter features Atlassian turns on for every UI string.
 DIRECTION_FEATURES = ("cv08", "cv10", "cv09", "cv07", "cv14", "ss07", "ss08")
 # Units removed from each advance when every glyph that shares that
@@ -68,19 +68,19 @@ GASP_SMOOTH = 0x0002 | 0x0008
 
 COPYRIGHT = (
     "Copyright 2016 The Inter Project Authors. "
-    "Copyright 2026 StayLabs."
+    "Copyright 2026 Chintan."
 )
-TRADEMARK = "StayLabs Sans. Inter is a trademark of rsms."
+TRADEMARK = "Flamex Sans. Inter is a trademark of rsms."
 DESCRIPTION = (
-    "StayLabs Sans is a screen-focused derivative of Inter for product interfaces. "
+    "Flamex Sans is a screen-focused derivative of Inter for product interfaces. "
     "Defaults use the Inter alternates from the Atlassian app-face recipe: "
     "serif I, spurred G, flat-top 3, alternate German double s, and square "
     "punctuation and quotes. Spacing is slightly tighter than Inter. "
     "Original design by Rasmus Andersson and the Inter Project Authors. "
-    "StayLabs Sans is not endorsed by the Inter project or by Atlassian."
+    "Flamex Sans is not endorsed by the Inter project or by Atlassian."
 )
 DESIGNER = "Rasmus Andersson"
-MANUFACTURER = "StayLabs"
+MANUFACTURER = "Flamex"
 LICENSE = (
     "This Font Software is licensed under the SIL Open Font License, Version 1.1. "
     "This license is available with a FAQ at: http://scripts.sil.org/OFL"
@@ -310,7 +310,7 @@ def set_gasp(font: TTFont) -> None:
 
 def apply_common_metadata(font: TTFont, italic: bool) -> None:
     head = font["head"]
-    head.fontRevision = 1.0
+    head.fontRevision = 1.2
     head.macStyle = ITALIC_BIT if italic else 0
     os2 = font["OS/2"]
     os2.achVendID = VENDOR
@@ -438,7 +438,7 @@ def finalize_static(font, weight: int, weight_name: str, italic: bool, ascent: i
     os2.fsType = 0
     os2.achVendID = VENDOR
     font["head"].macStyle = mac
-    font["head"].fontRevision = 1.0
+    font["head"].fontRevision = 1.2
     setMacOverlapFlags(font["glyf"])
     set_gasp(font)
     apply_vertical_clip(font, ascent, descent)
@@ -529,10 +529,10 @@ def write_web_subsets() -> None:
     web = OUT / "web"
     web.mkdir(parents=True, exist_ok=True)
     jobs = (
-        ("StayLabsSans-Variable.ttf", WEB_LATIN, "StayLabsSans-latin.woff2"),
-        ("StayLabsSans-Variable.ttf", WEB_LATIN_EXT, "StayLabsSans-latin-ext.woff2"),
-        ("StayLabsSans-VariableItalic.ttf", WEB_LATIN, "StayLabsSans-Italic-latin.woff2"),
-        ("StayLabsSans-VariableItalic.ttf", WEB_LATIN_EXT, "StayLabsSans-Italic-latin-ext.woff2"),
+        (f"{PS_FAMILY}-Variable.ttf", WEB_LATIN, f"{PS_FAMILY}-latin.woff2"),
+        (f"{PS_FAMILY}-Variable.ttf", WEB_LATIN_EXT, f"{PS_FAMILY}-latin-ext.woff2"),
+        (f"{PS_FAMILY}-VariableItalic.ttf", WEB_LATIN, f"{PS_FAMILY}-Italic-latin.woff2"),
+        (f"{PS_FAMILY}-VariableItalic.ttf", WEB_LATIN_EXT, f"{PS_FAMILY}-Italic-latin-ext.woff2"),
     )
     for source_name, unicodes, dest_name in jobs:
         font = TTFont(OUT / "variable" / source_name)
@@ -563,9 +563,9 @@ def write_font(font: TTFont, ttf: Path, woff2: Path, woff: Path | None = None) -
 def write_css(static_faces: list[tuple[int, bool, str]]) -> None:
     CSS_PATH.parent.mkdir(parents=True, exist_ok=True)
     lines = [
-        "/* StayLabs Sans. SIL Open Font License 1.1. See ../OFL.txt.",
-        "   Use StayLabs Sans Variable where the browser understands variable fonts.",
-        "   StayLabs Sans is the static fallback for older browsers. */",
+        "/* Flamex Sans. SIL Open Font License 1.1. See ../OFL.txt.",
+        "   Use Flamex Sans Variable where the browser understands variable fonts.",
+        "   Flamex Sans is the static fallback for older browsers. */",
         "",
         "@font-face {",
         f'  font-family: "{VARIABLE_FAMILY}";',
@@ -603,16 +603,16 @@ def write_css(static_faces: list[tuple[int, bool, str]]) -> None:
     lines.extend(
         [
             "",
-            ".staylabs {",
+            ".flamex {",
             f'  font-family: "{VARIABLE_FAMILY}", "{FAMILY}", sans-serif;',
             "  font-synthesis: none;",
             "  font-optical-sizing: auto;",
             "}",
-            ".staylabs-data {",
+            ".flamex-data {",
             '  font-feature-settings: "ss02" 1, "tnum" 1;',
             "  font-variant-numeric: tabular-nums;",
             "}",
-            ".staylabs-single-story {",
+            ".flamex-single-story {",
             '  font-feature-settings: "cv11" 1;',
             "}",
             "",
