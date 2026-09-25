@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>StayLabs Sans</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="../css/staylabs.css">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1c1915;
+      --muted: #5e584e;
+      --paper: #f4f0e6;
+      --card: #fffdf8;
+      --line: #ddd4c4;
+      --accent: #8d3b22;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "StayLabs Sans Variable", "StayLabs Sans", sans-serif;
+      font-synthesis: none;
+      font-optical-sizing: auto;
+    }
+    main {
+      width: min(72rem, calc(100% - 2rem));
+      margin: 0 auto;
+      padding: 1.5rem 0 4rem;
+    }
+    header p, .lede, figcaption, .note, button, th, td, .label {
+      font-family: "StayLabs Sans Variable", "StayLabs Sans", sans-serif;
+    }
+    .label {
+      margin: 0 0 0.4rem;
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 650;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      font-weight: 560;
+      font-size: clamp(3rem, 12vw, 7rem);
+      letter-spacing: -0.045em;
+      line-height: 0.9;
+      font-variation-settings: "opsz" 32, "wght" 560;
+    }
+    .lede {
+      max-width: 38rem;
+      margin: 1.25rem 0 0;
+      font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+      font-weight: 430;
+      line-height: 1.35;
+    }
+    section { margin-top: 3rem; }
+    h2 {
+      margin: 0 0 1rem;
+      font-size: 1.35rem;
+      font-weight: 620;
+    }
+    .ladder { display: grid; gap: 0.85rem; }
+    .ladder article {
+      display: grid;
+      grid-template-columns: minmax(5.5rem, 8rem) 1fr;
+      gap: 0.75rem;
+      align-items: baseline;
+      border-top: 1px solid var(--line);
+      padding-top: 0.75rem;
+    }
+    .ladder b { font-weight: 560; font-size: 0.85rem; color: var(--muted); }
+    .ladder span { font-size: clamp(1.35rem, 3vw, 2rem); letter-spacing: -0.03em; }
+    .split {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+      gap: 1rem;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      padding: 1rem 1.1rem 1.15rem;
+    }
+    .card h3 { margin: 0 0 0.35rem; font-size: 1.05rem; font-weight: 640; }
+    .card p { margin: 0; line-height: 1.45; }
+    button {
+      min-height: 2.75rem;
+      margin: 0.85rem 0.5rem 0.85rem 0;
+      padding: 0.55rem 0.9rem;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      background: transparent;
+      color: inherit;
+      font-size: 0.95rem;
+      font-weight: 560;
+    }
+    button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+    .sample {
+      margin: 0;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 460;
+      letter-spacing: -0.03em;
+      line-height: 1.25;
+    }
+    .langs { display: grid; gap: 0.9rem; }
+    .langs p { margin: 0; font-size: clamp(1.2rem, 2.5vw, 1.7rem); line-height: 1.35; }
+    .ui {
+      display: grid;
+      gap: 0.9rem;
+    }
+    .row { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2.75rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 999px;
+      background: var(--ink);
+      color: var(--paper);
+      font-weight: 600;
+    }
+    .ghost {
+      display: inline-flex;
+      align-items: center;
+      min-height: 2.75rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      font-weight: 560;
+    }
+    table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+    th, td { text-align: left; padding: 0.55rem 0.4rem; border-bottom: 1px solid var(--line); white-space: nowrap; }
+    .scroll { overflow-x: auto; }
+    .note { color: var(--muted); font-size: 0.95rem; line-height: 1.45; }
+    footer { margin-top: 3rem; }
+    @media (max-width: 40rem) {
+      .ladder article { grid-template-columns: 1fr; gap: 0.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="label">StayLabs Sans 1.100</p>
+      <h1>StayLabs Sans</h1>
+      <p class="lede">An app face in the Atlassian Sans direction. Serif I, spurred G, flat-top 3, and square punctuation, set a little tighter than Inter.</p>
+    </header>
+
+    <section>
+      <h2>Weights</h2>
+      <div class="ladder" id="ladder">
+        <article><b>Thin 100</b><span style="font-weight:100">The quick brown fox jumps</span></article>
+        <article><b>Light 300</b><span style="font-weight:300">The quick brown fox jumps</span></article>
+        <article><b>Regular 400</b><span style="font-weight:400">The quick brown fox jumps</span></article>
+        <article><b>Medium 500</b><span style="font-weight:500">The quick brown fox jumps</span></article>
+        <article><b>Semibold 600</b><span style="font-weight:600">The quick brown fox jumps</span></article>
+        <article><b>Bold 700</b><span style="font-weight:700">The quick brown fox jumps</span></article>
+        <article><b>Black 900</b><span style="font-weight:900">The quick brown fox jumps</span></article>
+        <article><b>Italic 400</b><span style="font-weight:400;font-style:italic">The quick brown fox jumps</span></article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Letterforms</h2>
+      <p class="sample">“I got figure 3.”</p>
+      <p class="sample" id="story">A capable platform for real work, all day.</p>
+      <button type="button" id="toggle-story" aria-pressed="false">Use single-story a</button>
+      <p class="sample" id="ambiguous">Illinois 10010</p>
+      <button type="button" id="toggle-data" aria-pressed="false">Tail the l and slash the zero</button>
+      <p class="note">The serif I, spurred G, flat-top 3, and square dots and quotes are the default. Single-story a is cv11. The second button is ss02, for IDs.</p>
+    </section>
+
+    <section>
+      <h2>Optical size</h2>
+      <div class="split">
+        <figure class="card">
+          <figcaption class="label">Text, opsz 14</figcaption>
+          <p style="font-size:1.35rem;font-weight:450;font-variation-settings:'opsz' 14, 'wght' 450">Hamburgefonstiv at interface size, where the letters stay sturdy.</p>
+        </figure>
+        <figure class="card">
+          <figcaption class="label">Display, opsz 32</figcaption>
+          <p style="font-size:1.35rem;font-weight:450;font-variation-settings:'opsz' 32, 'wght' 450">Hamburgefonstiv at display size, where the letters get finer.</p>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>Languages</h2>
+      <div class="langs">
+        <p lang="vi">Tiếng Việt giữ đủ dấu trên mọi hệ điều hành.</p>
+        <p lang="ru">Северная линия для интерфейса и длинного текста.</p>
+        <p lang="el">Μια γραμματοσειρά για κάθε συσκευή.</p>
+        <p lang="en">Latin, Cyrillic, Greek, and Vietnamese stay in the same files.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Interface</h2>
+      <div class="card ui">
+        <div class="row">
+          <span class="pill">Publish</span>
+          <span class="ghost">Save draft</span>
+        </div>
+        <div class="scroll">
+          <table>
+            <thead>
+              <tr><th>Member</th><th>Plan</th><th>ID</th><th>Total</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Amelia Cho</td><td>Studio</td><td>10018</td><td>1,240.00</td></tr>
+              <tr><td>Noah Ivers</td><td>Team</td><td>10019</td><td>980.50</td></tr>
+              <tr><td>Leila Ortiz</td><td>Free</td><td>10020</td><td>0.00</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p class="note">StayLabs Sans is a derivative of Inter by Rasmus Andersson and the Inter Project Authors, under the SIL Open Font License 1.1. It is not endorsed by the Inter project. Install the TTF files in fonts/static, or the variable TTF files in fonts/variable. On the web, link css/staylabs.css.</p>
+    </footer>
+  </main>
+  <script>
+    var story = document.getElementById("story");
+    var storyButton = document.getElementById("toggle-story");
+    storyButton.addEventListener("click", function () {
+      var on = story.classList.toggle("staylabs-single-story");
+      storyButton.setAttribute("aria-pressed", on ? "true" : "false");
+      storyButton.textContent = on ? "Use double-story a" : "Use single-story a";
+    });
+    var data = document.getElementById("ambiguous");
+    var dataButton = document.getElementById("toggle-data");
+    dataButton.addEventListener("click", function () {
+      var on = data.classList.toggle("staylabs-data");
+      dataButton.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+  </script>
+</body>
+</html>
